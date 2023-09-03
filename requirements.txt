@@ -1,0 +1,15 @@
+easyocr==1.7.0
+langchain==0.0.279
+numpy==1.25.2
+openai==0.27.10
+Flask==2.3.3
+tiktoken==0.4.0
+googleapis-common-protos==1.60.0
+duckduckgo-search==3.8.5
+youtube-transcript-api==0.6.1
+pytube==15.0.0
+textbase-client
+Pillow==9.5.0
+functions-framework==3.4.0
+poetry==1.6.1
+zipp==3.16.2
