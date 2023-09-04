@@ -7,7 +7,7 @@ Here, you can find the detailed video of how you can locally run it: https://you
 Clone the repo: main.py,dermobuddy.py, requirements.txt, 
 
 Create virtual env => pip install -r requirements.txt => run this command in terminal "textbase-client test", then give path to main.py, you will get a localhost URL => open it = CHAT!!
-
+(add openai api key in dermobuddy.py)
 *Welcome to AI_Dermatologist*
 
 "
