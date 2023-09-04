@@ -23,7 +23,7 @@ I am an expert assistant chatbot in dermatology trained by 'DermVisionAI'. I can
 * Will Use Llama 2 model instead of OpenAI models. I once tried with Llama 2, impressed with its results.
 * I will scrap data like blogs, FAQs and make embeddings of them using openai ada model and store them in pinecone vector databse. Users can get most relevant answers for their queries by semantic search. - RAG.
 * I will add TTS(Text2Speech), STT(Speech2Text) models in the bot. Users can talk to it.
-* I will also implement youtube audio transcribing by using WhisperAI or other models, since currently this code will support only videos with transcripts.
+* I will also implement youtube audio transcribing by using audio to text models, since currently this code will support only videos with transcripts.
 
 
 #Local Testing
