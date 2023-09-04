@@ -34,4 +34,4 @@ I am an expert assistant chatbot in dermatology trained by 'DermVisionAI'. I can
 
 
 #Local Testing
-* Clone the Repo, install requirements, run textbase-client test, give path to main.py
+* [CHECK ABOVE]
