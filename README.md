@@ -3,6 +3,10 @@
 
 Here you can find the video of chatting with bot : https://youtu.be/2NlQAPhqjm0?si=aJhTxaT2sXmqtT89
 
+Here, you can find the detailed video of how you can locally run it: https://youtu.be/8MHoD4GiaFc
+Make a folder : main.py,dermobuddy.py, requirements.txt, 
+Create virtual env => pip install -r requirementx.txt => run this command in terminal "textbase-client test", then give path to main.py, you will get a localhost URL => open it = CHAT!!
+
 Welcome to AI_Dermatologist.
 
 "
