@@ -8,8 +8,7 @@ Here, you can find the detailed video of how you can locally run it: https://you
 Make a folder : main.py,dermobuddy.py, requirements.txt, 
 Create virtual env => pip install -r requirementx.txt => run this command in terminal "textbase-client test", then give path to main.py, you will get a localhost URL => open it = CHAT!!
 
-Welcome to AI_Dermatologist.
-
+*Welcome to AI_Dermatologis*
 "
 I am an expert assistant chatbot in dermatology trained by 'DermVisionAI'. I can assist you with your skin health related queries. I can provide information about skin care products, summarize skin care related YouTube videos, and answer any dermatology related questions you might have. I can also extract text from images of products to provide information about them.
 "
