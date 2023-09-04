@@ -13,6 +13,9 @@ from langchain.agents import initialize_agent
 import os
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from textbase.models import OpenAI
+import openai
+from langchain.llms import OpenAI
 # import nltk
 # from nltk.corpus import stopwords
 # from nltk.tokenize import word_tokenize
@@ -23,9 +26,7 @@ import string
 # nltk.download("stopwords")
 # nltk.download('wordnet')
 
-
-
-os.environ["OPENAI_API_KEY"] = ""
+api_key= "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"
 
 def extract_text(image_path, language='en'):
     try:
@@ -70,7 +71,7 @@ prompt_ocr = PromptTemplate(
 
 
 chain_ocr = LLMChain(
-    llm=ChatOpenAI(temperature=0, model = 'gpt-3.5-turbo', max_tokens = 3000),
+    llm=ChatOpenAI(temperature=0, model = 'gpt-3.5-turbo', max_tokens = 3000, openai_api_key=api_key),
     prompt=prompt_ocr,
     verbose=False,
 )
@@ -117,7 +118,7 @@ Context: {context}
 prompt = PromptTemplate(template=template, input_variables=["query","context"])
 search_llm = ChatOpenAI(
         temperature=0,
-        model_name='gpt-3.5-turbo',
+        model_name='gpt-3.5-turbo', openai_api_key=api_key
 )
 llm_chain_search = LLMChain(prompt=prompt, llm=search_llm)
 
@@ -154,7 +155,7 @@ prompt_youtube = PromptTemplate(
 
 
 chain_youtube = LLMChain(
-    llm=ChatOpenAI(temperature=0, model = 'gpt-3.5-turbo-16k'),
+    llm=ChatOpenAI(temperature=0, model = 'gpt-3.5-turbo-16k', openai_api_key=api_key),
     prompt=prompt_youtube,
     verbose=False,
 )
@@ -219,6 +220,7 @@ tools = [
 agent_llm = ChatOpenAI(
         temperature=0,
         model_name='gpt-4',
+        openai_api_key=api_key
 )
 
 # agent = initialize_agent(tools, llm = agent_llm, agent=AgentType.OPENAI_FUNCTIONS, verbose=True)
@@ -230,7 +232,7 @@ conversational_memory = ConversationBufferWindowMemory(
 )
 
 
-agent = initialize_agent(
+derm_agent = initialize_agent(
     agent='chat-conversational-react-description',
     tools=tools,
     llm=agent_llm,
@@ -243,10 +245,10 @@ agent = initialize_agent(
 )
 
 
-new_prompt = agent.agent.create_prompt(
+new_prompt = derm_agent.agent.create_prompt(
     system_message=sys_msg,
     tools=tools
 
 )
 
-agent.agent.llm_chain.prompt = new_prompt
+derm_agent.agent.llm_chain.prompt = new_prompt

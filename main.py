@@ -5,8 +5,7 @@ from dermobuddy import *
 @bot()
 def on_message(message_history: List[Message], state: dict = None):
     print(message_history[-1]["content"][0]['value'])
-    # Generate GPT-3.5 Turbo response
-    bot_response = agent({"input" :message_history[-1]["content"][0]['value']})["output"]
+    bot_response = derm_agent({"input" :message_history[-1]["content"][0]['value']})["output"]
 
     response = {
         "data": {
