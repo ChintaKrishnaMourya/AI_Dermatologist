@@ -2,6 +2,7 @@
 (check main.py and dermobuddy.py for the code implementation)
 
 Here you can find the video of chatting with bot : https://youtu.be/2NlQAPhqjm0?si=aJhTxaT2sXmqtT89
+
 Welcome to AI_Dermatologist.
 
 "
